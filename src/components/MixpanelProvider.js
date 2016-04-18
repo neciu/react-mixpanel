@@ -1,4 +1,4 @@
-import { Component, PropTypes, Children } from 'react';
+import {Component, PropTypes, Children} from 'react';
 import mixpanelShape from '../utils/mixpanelShape';
 
 
@@ -13,7 +13,7 @@ export default class MixpanelProvider extends Component {
     }
 
     render() {
-        const {children} = this._mixpanel;
+        const {children} = this.props;
         return Children.only(children);
     }
 }
