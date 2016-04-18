@@ -1,2 +1,2 @@
 import MixpanelProvider from './components/MixpanelProvider';
-export {MixpanelProvider};
+export default MixpanelProvider;
