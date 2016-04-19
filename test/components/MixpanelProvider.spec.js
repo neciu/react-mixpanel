@@ -12,10 +12,22 @@ chai.use(sinonChai);
 describe('React MixpanelProvider', () => {
     class Child extends React.Component {
         render() {
-            return <div/>;
+            return <div>
+                <span>Child</span>
+                {this.props.children}
+            </div>;
         }
     }
     Child.contextTypes = {
+        mixpanel: PropTypes.object.isRequired
+    };
+
+    class InnerChild extends React.Component {
+        render() {
+            return <span>InnerChild</span>;
+        }
+    }
+    InnerChild.contextTypes = {
         mixpanel: PropTypes.object.isRequired
     };
 
@@ -31,5 +43,24 @@ describe('React MixpanelProvider', () => {
 
         const child = TestUtils.findRenderedComponentWithType(tree, Child);
         expect(child.context.mixpanel).to.be.eql(mixpanel);
+    });
+
+    it('should add mixpanel to the inner child context too', () => {
+        sinon.spy(console, 'error');
+        const tree = TestUtils.renderIntoDocument(
+            <MixpanelProvider mixpanel={mixpanel}>
+                <Child>
+                    <InnerChild/>
+                </Child>
+            </MixpanelProvider>
+        );
+        expect(console.error).not.to.be.called;
+        console.error.restore();
+
+        const child = TestUtils.findRenderedComponentWithType(tree, Child);
+        expect(child.context.mixpanel).to.be.eql(mixpanel);
+
+        const innerChild = TestUtils.findRenderedComponentWithType(tree, InnerChild);
+        expect(innerChild.context.mixpanel).to.be.eql(mixpanel);
     });
 });
