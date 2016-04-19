@@ -45,3 +45,7 @@ App.contextTypes = {
 };
 ```
 Note that you have to add `contextTypes` property to your component.
+
+## Example
+
+You can play with included *Simple Example* in `examples` directory.

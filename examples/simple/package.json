@@ -1,0 +1,24 @@
+{
+  "name": "react-mixpanel-simple-example",
+  "version": "1.0.0",
+  "description": "react-mixpanel integration example",
+  "main": "index.js",
+  "scripts": {
+    "watch": "./node_modules/.bin/webpack-dev-server --progress --colors --devtool sourcemap --hot --port 9200"
+  },
+  "author": "Tomasz Netczuk <contact@netczuk.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "mixpanel-browser": "^2.7.2",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mixpanel": "^0.0.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.4",
+    "html-webpack-plugin": "^2.16.0",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
