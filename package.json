@@ -20,6 +20,7 @@
   "homepage": "https://github.com/neciu/react-mixpanel#readme",
   "peerDependencies": {
     "react": "^15.0.0",
+    "prop-types": "^15.5.10",
     "mixpanel-browser": "^2.7.2"
   },
   "devDependencies": {
