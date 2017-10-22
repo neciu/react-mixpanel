@@ -1,7 +1,8 @@
 import chai, {expect} from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import TestUtils from 'react-addons-test-utils';
 import mixpanel from 'mixpanel-browser';
 import MixpanelProvider from '../../src/components/MixpanelProvider';
