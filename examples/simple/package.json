@@ -8,17 +8,18 @@
   },
   "author": "Tomasz Netczuk <contact@netczuk.pl>",
   "license": "MIT",
-  "dependencies": {
-    "mixpanel-browser": "2.7.2",
-    "react": "15.0.1",
-    "react-dom": "15.0.1",
-    "react-mixpanel": "0.0.6"
-  },
   "devDependencies": {
     "babel-core": "6.7.6",
     "babel-loader": "6.2.4",
     "html-webpack-plugin": "2.16.0",
     "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "mixpanel-browser": "2.13.0",
+    "prop-types": "15.6.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-mixpanel": "0.0.9"
   }
 }
