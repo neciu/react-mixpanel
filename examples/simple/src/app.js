@@ -5,7 +5,7 @@ import MixpanelProvider from 'react-mixpanel';
 import mixpanel from 'mixpanel-browser';
 
 
-mixpanel.init('24f9321d57326888b6ce1512cf6e5229');
+mixpanel.init('c1e2d6f3a7599132482ecd7f66670ae0');
 
 class App extends React.Component {
     componentDidMount() {
