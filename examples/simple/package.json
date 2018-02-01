@@ -16,7 +16,7 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "mixpanel-browser": "2.14.0",
+    "mixpanel-browser": "2.16.0",
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
