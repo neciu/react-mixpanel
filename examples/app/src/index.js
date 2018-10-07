@@ -41,6 +41,6 @@ class MixpanelDependantComponent extends React.Component {
 	}
 }
 
-ReactDOM.render(<MixpanelProvider value={mixpanel}>
+ReactDOM.render(<MixpanelProvider mixpanel={mixpanel}>
 	<App/>
 </MixpanelProvider>, document.getElementById('root'));
