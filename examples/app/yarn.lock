@@ -7717,9 +7717,9 @@ react-error-overlay@^5.0.4:
   integrity sha512-grVJtoDzIbSMYgy5rKbSOmt2FvzR4iJnpMBjXmZolSYJM5acQvBHoEbBBNW0FzTE/TLZMZ+gSy0bAHydc1hFEw==
 
 react-mixpanel@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-mixpanel/-/react-mixpanel-1.0.0.tgz#b7c116859001283735f897fe40be49baf191922e"
-  integrity sha512-BNz+X+0zfi2yU68vA9z77COv9aZ7vzdsZl2UyF/fBZh3hcF+ZiaRX0dendUNdtPQsdP8JadJneg1S2JFjFJT0A==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-mixpanel/-/react-mixpanel-1.0.1.tgz#1bf8aa09b7bbb09458472ea1aff618ce327afe36"
+  integrity sha512-p+k7dYoJv84mRVZLLYpLkrh+2S0h2k7J91nxsolh/5HH+4pWQYtcs3DaB9XHLHPcTLlbJCNehr8I0UivADhb4w==
 
 react-scripts@2.0.4:
   version "2.0.4"
