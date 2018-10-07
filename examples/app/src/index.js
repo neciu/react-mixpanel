@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import mixpanel from 'mixpanel-browser';
-import {MixpanelProvider, MixpanelConsumer} from "./lib";
+import {MixpanelProvider, MixpanelConsumer} from "react-mixpanel";
 
 // initialize mixpanel
 mixpanel.init('c1e2d6f3a7599132482ecd7f66670ae0');

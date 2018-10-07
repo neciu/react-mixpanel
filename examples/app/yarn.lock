@@ -7716,6 +7716,11 @@ react-error-overlay@^5.0.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.4.tgz#39cf184d770f98b65a2ee59a779d03b8d092b69e"
   integrity sha512-grVJtoDzIbSMYgy5rKbSOmt2FvzR4iJnpMBjXmZolSYJM5acQvBHoEbBBNW0FzTE/TLZMZ+gSy0bAHydc1hFEw==
 
+react-mixpanel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-mixpanel/-/react-mixpanel-1.0.0.tgz#b7c116859001283735f897fe40be49baf191922e"
+  integrity sha512-BNz+X+0zfi2yU68vA9z77COv9aZ7vzdsZl2UyF/fBZh3hcF+ZiaRX0dendUNdtPQsdP8JadJneg1S2JFjFJT0A==
+
 react-scripts@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.0.4.tgz#244a69abbf5630a80ad81349a6d0d56d91583c6c"
