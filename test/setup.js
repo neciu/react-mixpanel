@@ -1,7 +1,4 @@
-import {jsdom} from 'jsdom';
-import {XMLHttpRequest} from 'xmlhttprequest';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-global.document = jsdom('<!doctype html><html><body></body></html>');
-global.window = document.defaultView;
-global.navigator = global.window.navigator;
-global.XMLHttpRequest = XMLHttpRequest;
+configure({ adapter: new Adapter() });
