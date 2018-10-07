@@ -5,8 +5,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest",
-    "build": "./node_modules/.bin/babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "build": "rm -rf ./lib && ./node_modules/.bin/babel src --out-dir lib",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
