@@ -14,7 +14,7 @@ it('should complain when wrong mixpanel shape given', () => {
 	});
 	
 	expect(() => {
-		<MixpanelProvider value={brokenMixpanel}><div>FOO</div></MixpanelProvider>
+		<MixpanelProvider mixpanel={brokenMixpanel}><div>FOO</div></MixpanelProvider>
 	}).toThrow();
 });
 
@@ -31,7 +31,7 @@ it('should not complain when correct mixpanel shape given', () => {
 	});
 	
 	expect(() => {
-		<MixpanelProvider value={workingMixpanel}><div>FOO</div></MixpanelProvider>
+		<MixpanelProvider mixpanel={workingMixpanel}><div>FOO</div></MixpanelProvider>
 	}).not.toThrow();
 });
 
@@ -54,7 +54,7 @@ it('consumer should fire passed mixpanel functions', () => {
 	}
 	
 	const App = () =>
-		<MixpanelProvider value={mixpanel}>
+		<MixpanelProvider mixpanel={mixpanel}>
 			<MixpanelConsumer>
 				{mixpanel => <SomeComponent mixpanel={mixpanel}/>}
 			</MixpanelConsumer>

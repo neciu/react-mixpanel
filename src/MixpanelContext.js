@@ -12,7 +12,7 @@ Provider.propTypes = {
 
 export class MixpanelProvider extends React.Component {
 	render() {
-		return <Provider value={this.props.value}>
+		return <Provider value={this.props.mixpanel}>
 			{this.props.children}
 		</Provider>
 	}
@@ -27,7 +27,7 @@ export const mixpanelShape = PropTypes.shape({
 
 MixpanelProvider.propTypes = {
 	children: PropTypes.node.isRequired,
-	value: mixpanelShape
+	mixpanel: mixpanelShape
 };
 
 export const MixpanelConsumer = Consumer;
