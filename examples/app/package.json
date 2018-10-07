@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "mixpanel-browser": "2.22.4",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-mixpanel": "^1.0.0",
     "react-scripts": "2.0.4"
   },
   "scripts": {
