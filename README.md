@@ -2,19 +2,19 @@
 
 [![Build Status](https://travis-ci.org/neciu/react-mixpanel.svg?branch=master)](https://travis-ci.org/neciu/react-mixpanel)
 
-The project provides `MixpanelProvider` which uses [mixpanel-browser](https://github.com/mixpanel/mixpanel-js) to ease using Mixpanel in your React app.
+The project provides simple wrapper over [mixpanel-browser](https://github.com/mixpanel/mixpanel-js) to ease using Mixpanel in your React app.
 
 
 ## Usage
 
 Install with: `npm i react-mixpanel --save`
 
-Then use it like you would use [react-redux](https://github.com/reactjs/react-redux). In your root `App.js`:
+Then use it like you would use [Context API](https://reactjs.org/docs/context.html). In your root `App.js`:
 
 1. Import required modules:
 ```
 import mixpanel from 'mixpanel-browser';
-import MixpanelProvider from 'react-mixpanel';
+import { MixpanelProvider, MixpanelConsumer } from 'react-mixpanel';
 ```
 2. Initialize your Mixpanel instance:
 ```
@@ -29,23 +29,36 @@ ReactDOM.render(
     document.getElementById('app')
 );
 ```
-4. Then all child components will be able to use `mixpanel` from their `context`:
+4. Then, everytime you'd like to use mixpanel you can get it using `MixpanelConsumer`:
 ```
-class App extends React.Component {
+const App = () => 
+    <Foo>
+        <MixpanelConsumer/>
+            {mixpanel => ...}
+        </MixpanelConsumer>
+    </Foo>;
+```
+You can use mixpanel in lifecycle methods by passing it via prop!
+```
+class INeedMixpanel extends React.Component {
     componentDidMount() {
-        this.context.mixpanel.track('App did mount.');
+        this.props.mixpanel.track('Hello mixpanel!');
     }
 
     render() {
-        return <span>This is the app!</span>;
+        return <div>Bar</div>;  
     }
 }
-App.contextTypes = {
-    mixpanel: PropTypes.object.isRequired
-};
+
+const App = () => 
+    <Foo>
+        <MixpanelConsumer/>
+            {mixpanel => <INeedMixpanel mixpanel={mixpanel}/>}
+        </MixpanelConsumer>
+    </Foo>;
+
 ```
-Note that you have to add `contextTypes` property to your component.
 
 ## Example
 
-You can play with included *Simple Example* in `examples` directory.
+You can play with included example *App* in `examples` directory.
