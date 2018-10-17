@@ -20,9 +20,12 @@ it('should complain when wrong mixpanel shape given', () => {
 
 it('should not complain when correct mixpanel shape given', () => {
 	const workingMixpanel = {
-		init: () => {},
-		track: () => {},
-		register: () => {},
+		init: () => { },
+		identify: () => { },
+		track: () => { },
+		track_links: () => { },
+		register: () => { },
+		register_once: () => { },
 		people: {},
 	};
 	
@@ -38,8 +41,11 @@ it('should not complain when correct mixpanel shape given', () => {
 it('consumer should fire passed mixpanel functions', () => {
 	const mixpanel = {
 		init: jest.fn(),
-		track: () => {},
-		register: () => {},
+		identify: () => { },
+		track: () => { },
+		track_links: () => { },
+		register: () => { },
+		register_once: () => { },
 		people: {},
 	};
 	

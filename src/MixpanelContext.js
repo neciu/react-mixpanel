@@ -1,33 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import mixpanel from './MixpanelMock';
+import MixpanelPropType from './MixpanelPropType';
+
 const {Provider, Consumer} = React.createContext();
 
 Provider.propTypes = {
-	value: PropTypes.shape({
-		init: PropTypes.func.isRequired,
-		track: PropTypes.func.isRequired,
-	})
+	value: MixpanelPropType,
 };
 
 export class MixpanelProvider extends React.Component {
+	static propTypes = {
+		children: PropTypes.node.isRequired,
+		mixpanel: MixpanelPropType,
+	}
+
+	static defaultProps = {
+		mixpanel,
+	};
+
 	render() {
 		return <Provider value={this.props.mixpanel}>
 			{this.props.children}
 		</Provider>
 	}
 }
-
-export const mixpanelShape = PropTypes.shape({
-	init: PropTypes.func.isRequired,
-	track: PropTypes.func.isRequired,
-	register: PropTypes.func.isRequired,
-	people: PropTypes.object.isRequired,
-});
-
-MixpanelProvider.propTypes = {
-	children: PropTypes.node.isRequired,
-	mixpanel: mixpanelShape
-};
 
 export const MixpanelConsumer = Consumer;
