@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const {Provider, Consumer} = React.createContext();
+export const MixpanelContext = React.createContext();
 
-Provider.propTypes = {
+MixpanelContext.Provider.propTypes = {
 	value: PropTypes.shape({
 		init: PropTypes.func.isRequired,
 		track: PropTypes.func.isRequired,
@@ -12,9 +12,9 @@ Provider.propTypes = {
 
 export class MixpanelProvider extends React.Component {
 	render() {
-		return <Provider value={this.props.mixpanel}>
+		return <MixpanelContext.Provider value={this.props.mixpanel}>
 			{this.props.children}
-		</Provider>
+		</MixpanelContext.Provider>
 	}
 }
 
@@ -30,4 +30,4 @@ MixpanelProvider.propTypes = {
 	mixpanel: mixpanelShape
 };
 
-export const MixpanelConsumer = Consumer;
+export const MixpanelConsumer = MixpanelContext.Consumer;
