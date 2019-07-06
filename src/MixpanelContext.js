@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const MixpanelContext = React.createContext();
+const MixpanelContext = React.createContext();
+export default MixpanelContext
 
 MixpanelContext.Provider.propTypes = {
 	value: PropTypes.shape({

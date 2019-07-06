@@ -1,1 +1,1 @@
-export {MixpanelProvider, MixpanelConsumer,MixpanelContext} from './MixpanelContext'
+export {default as default, MixpanelProvider, MixpanelConsumer} from './MixpanelContext'

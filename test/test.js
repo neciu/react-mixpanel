@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import {MixpanelConsumer, MixpanelProvider} from '../src/MixpanelContext';
+import MixpanelContext, {MixpanelConsumer, MixpanelProvider} from '../src/index';
 import {mount} from "enzyme";
 
 it('should complain when wrong mixpanel shape given', () => {
@@ -66,4 +66,20 @@ it('consumer should fire passed mixpanel functions', () => {
 	expect(mixpanel.init).toBeCalledWith('Hello fromSomeComponent!');
 });
 
+it('should work with default MixpanelContext used', () => {
+	const mixpanel = {
+		init: () => {},
+		track: () => {},
+		register: () => {},
+		people: {},
+	};
+
+	console.error = jest.fn(error => {
+		throw new Error(error);
+	});
+
+	expect(() => {
+		<MixpanelContext.Provider mixpanel={mixpanel}><div>FOO</div></MixpanelContext.Provider>
+	}).not.toThrow();
+});
 
