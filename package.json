@@ -1,6 +1,6 @@
 {
   "name": "react-mixpanel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Unofficial React bindings for Mixpanel",
   "main": "./lib/index.js",
   "scripts": {
