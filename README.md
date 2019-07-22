@@ -33,7 +33,7 @@ ReactDOM.render(
 ```
 const App = () => 
     <Foo>
-        <MixpanelConsumer/>
+        <MixpanelConsumer>
             {mixpanel => ...}
         </MixpanelConsumer>
     </Foo>;
@@ -52,7 +52,7 @@ class INeedMixpanel extends React.Component {
 
 const App = () => 
     <Foo>
-        <MixpanelConsumer/>
+        <MixpanelConsumer>
             {mixpanel => <INeedMixpanel mixpanel={mixpanel}/>}
         </MixpanelConsumer>
     </Foo>;
